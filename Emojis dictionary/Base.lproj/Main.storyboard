@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sop-XG-qWi">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emojis_dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TlX-ue-6Ke">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TlX-ue-6Ke" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vev-iL-4FS"/>
+                            <constraint firstAttribute="trailing" secondItem="TlX-ue-6Ke" secondAttribute="trailing" id="k89-co-TCu"/>
+                            <constraint firstItem="TlX-ue-6Ke" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nde-AN-ZPh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TlX-ue-6Ke" secondAttribute="bottom" id="qCS-eJ-PsU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ItU-Ng-xrn"/>
+                    <connections>
+                        <outlet property="myFunnyTableView" destination="TlX-ue-6Ke" id="UcB-T0-0cq"/>
+                        <segue destination="C1L-Fj-yMN" kind="show" identifier="moveSegue" id="9mh-Jf-LtE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JQe-gw-vOf">
+            <objects>
+                <viewController id="C1L-Fj-yMN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7eM-GB-NfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7F7-cB-Un4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I1X-CV-oyG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vs-zg-zUJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a lovely church" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKl-lR-gIU">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BKl-lR-gIU" firstAttribute="top" secondItem="9Vs-zg-zUJ" secondAttribute="bottom" constant="50" id="CCL-RE-vkn"/>
+                            <constraint firstItem="9Vs-zg-zUJ" firstAttribute="top" secondItem="7eM-GB-NfZ" secondAttribute="bottom" constant="50" id="J75-3B-esu"/>
+                            <constraint firstItem="BKl-lR-gIU" firstAttribute="centerX" secondItem="I1X-CV-oyG" secondAttribute="centerX" id="ovq-My-Fdk"/>
+                            <constraint firstItem="9Vs-zg-zUJ" firstAttribute="centerX" secondItem="I1X-CV-oyG" secondAttribute="centerX" id="uHv-2S-QIM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVf-GL-w7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708" y="36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oa7-vH-ncK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sop-XG-qWi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yY2-Za-obl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Bg-gD-iMK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohF-uv-1ji" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="36"/>
+        </scene>
+    </scenes>
+</document>
