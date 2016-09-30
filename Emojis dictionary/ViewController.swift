@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
   @IBOutlet weak var myFunnyTableView: UITableView!
   
-  let emojis = ["😀","😎","🤑","🐹"]
+  let emojis = ["😀", "😎", "🤑", "🐹", "🏠"]
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,7 +35,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "moveSegue", sender: "🚧")
+    tableView.deselectRow(at: indexPath, animated: true)
+    
+    let emoji = emojis[indexPath.row]
+    
+    performSegue(withIdentifier: "moveSegue", sender: emoji)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let defVC = segue.destination as! DefinitionViewController
+    
+    defVC.emoji = sender as! String
   }
 
   override func didReceiveMemoryWarning() {
