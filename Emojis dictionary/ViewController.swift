@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
   @IBOutlet weak var myFunnyTableView: UITableView!
   
-  let emojis = ["😀", "😎", "🤑", "🐹", "🏠"]
+  var emojis: [Emoji] = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     myFunnyTableView.dataSource = self
     myFunnyTableView.delegate = self
+    emojis = createEmojis()
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell()
     
-    cell.textLabel?.text = emojis[indexPath.row]
+    cell.textLabel?.text = emojis[indexPath.row].stringEmoji
     
     return cell
   }
@@ -45,14 +46,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let defVC = segue.destination as! DefinitionViewController
     
-    defVC.emoji = sender as! String
+    defVC.emoji = sender as! Emoji
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  func createEmojis() -> [Emoji] {
+    let emoji1 = Emoji()
+    emoji1.stringEmoji = "😀"
+    emoji1.category = "Smiley"
+    emoji1.description = "Just a smiley face"
+    emoji1.birthYear = "2010"
+    
+    let emoji2 = Emoji()
+    emoji2.stringEmoji = "😎"
+    emoji2.category = "Smiley"
+    emoji2.description = "This is a thug face"
+    emoji2.birthYear = "2010"
+    
+    let emoji3 = Emoji()
+    emoji3.stringEmoji = "🤑"
+    emoji3.category = "Smiley"
+    emoji3.description = "Someone who loves money"
+    emoji3.birthYear = "2010"
+    
+    let emoji4 = Emoji()
+    emoji4.stringEmoji = "🐹"
+    emoji4.category = "Animals"
+    emoji4.description = "This is a cute hamster !"
+    emoji4.birthYear = "2011"
+    
+    let emoji5 = Emoji()
+    emoji5.stringEmoji = "💒"
+    emoji5.category = "Monuments"
+    emoji5.description = "This is a lovely church"
+    emoji5.birthYear = "2013"
+    
+    return [emoji1, emoji2, emoji3, emoji4, emoji5]
   }
-
-
 }
 

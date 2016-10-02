@@ -13,6 +13,7 @@
 		D05380FD1D9E983900125760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05380FC1D9E983900125760 /* Assets.xcassets */; };
 		D05381001D9E983900125760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05380FE1D9E983900125760 /* LaunchScreen.storyboard */; };
 		D05381081D9EAEF500125760 /* DefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05381071D9EAEF500125760 /* DefinitionViewController.swift */; };
+		D084304D1DA150AF00976788 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084304C1DA150AF00976788 /* Emoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D05380FF1D9E983900125760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D05381011D9E983900125760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05381071D9EAEF500125760 /* DefinitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionViewController.swift; sourceTree = "<group>"; };
+		D084304C1DA150AF00976788 /* Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		D05380F41D9E983900125760 /* Emojis dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				D084304C1DA150AF00976788 /* Emoji.swift */,
 				D05380F51D9E983900125760 /* AppDelegate.swift */,
 				D05380F71D9E983900125760 /* ViewController.swift */,
 				D05381071D9EAEF500125760 /* DefinitionViewController.swift */,
@@ -142,6 +145,7 @@
 			files = (
 				D05380F81D9E983900125760 /* ViewController.swift in Sources */,
 				D05381081D9EAEF500125760 /* DefinitionViewController.swift in Sources */,
+				D084304D1DA150AF00976788 /* Emoji.swift in Sources */,
 				D05380F61D9E983900125760 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +310,7 @@
 				D05381061D9E983900125760 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
